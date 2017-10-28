@@ -1,0 +1,37 @@
+<?php
+
+//check for root
+$root = __DIR__;
+
+
+//dev
+if (!preg_match("/upload/", __DIR__)) {
+    $root = __DIR__ . "/../../";
+    require_once __DIR__ . '/../vendor/autoload.php';
+} else {
+    //once the console file was moved
+    require_once __DIR__ . './upload/system/storage/vendor/autoload.php';
+}
+
+$admin = $root . "upload" . DIRECTORY_SEPARATOR . "admin" . DIRECTORY_SEPARATOR . "config.php";
+if (is_file($admin)) {
+    require_once $admin;
+}
+
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+
+$export = new Rmanara\App\CommandExport();
+$export->__setpath($root);
+$application->add($export);
+
+$build = new Rmanara\App\CommandBuild();
+$build->__setpath($root);
+$application->add($build);
+
+$data = new Rmanara\App\CommandData();
+$data->__setpath($root);
+$application->add($data);
+
+$application->run();

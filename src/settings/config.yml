@@ -1,0 +1,45 @@
+oc_patten:
+       v_3:
+            extension:
+                admin:
+                    - controller\extension\{type}\{file}.php
+                    - language\{iso}\extension\{type}\{file}.php
+                    - model\extension\{type}\{file}.php
+                    - view\template\extension\{type}\{file}.twig
+
+                catalog:
+                    - view\theme\{theme-name}\extension\extension\{file}.twig
+                    - model\{type}\extension\{file}.php
+                    - language\iso\{type}\extension\{file}.php
+                    - controller\{type}\extension\{file}.php
+            module:
+                admin:
+                    - view\template\module\{file}_module.twig
+                    - model\module\{file}.php
+                    - language\iso\model\module\{file}.php
+                    - controller\module\{file}.php
+                catalog:
+                    - catalog\view\theme\{themename}\template\module\{file}.twig
+                    - language\iso\model\module\{file}.twig
+       v_2:
+            extension:
+                admin:
+                    - controller\extension\{type}\{file}.php
+                    - language\{iso}\extension\{type}\{file}.php
+                    - model\extension\{type}\{file}.php
+                    - view\template\extension\{type}\{file}.tpl
+
+                catalog:
+                    - view\theme\{theme-name}\extension\extension\{file}.tpl
+                    - model\{type}\extension\{file}.php
+                    - language\iso\{type}\extension\{file}.php
+                    - controller\{type}\extension\{file}.php
+            module:
+                admin:
+                    - view\template\module\{file}_module.tpl
+                    - model\module\{file}.php
+                    - language\iso\model\module\{file}.php
+                    - controller\module\{file}.php
+                catalog:
+                    - catalog\view\theme\{themename}\template\module\{file}.tpl
+                    - language\iso\model\module\{file}.tpl            
