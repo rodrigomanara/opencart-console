@@ -1,6 +1,6 @@
 {
     "name": "rmanara/console",
-    "description": "app to manage OC extension or modules also build extension or module for opencart",
+    "description": "app to manage OC extension, data or modules also build extension or module for opencart",
     "license": "MIT", 
     "version": "1.0.0",  
     "authors": [
@@ -26,9 +26,10 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.0"
+            "master": "1.0.0"
         }
     },
     "minimum-stability": "stable",
     "prefer-stable": true
 }
+ 
