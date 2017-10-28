@@ -11,8 +11,8 @@ CLI still need to add the validations but for now it does the job to find the fi
 
 > composer install
     
-    <pre><code>
-     {
+<pre><code>
+{
     "name": "opencart/opencart",
 	   .....
     },
@@ -26,8 +26,8 @@ CLI still need to add the validations but for now it does the job to find the fi
         "post-update-cmd": [
             "Rmanara\\Lib\\Installer::Init"
         ]
-	  }
-	}
+   }
+}
 </code> </pre> 
 
 After the installation you will a notification saying:
@@ -36,7 +36,9 @@ file console ready
 now you can run the cli to export the extension files that you were working on
 
 > php console app:export {filename}
+
 > php console app:build 
+
 > php console app:data {dump|optmise}
 
 it will build the folder **"/temp_extension"** and put all file that has that name in it
