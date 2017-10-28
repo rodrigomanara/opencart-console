@@ -2,7 +2,7 @@
     "name": "rmanara/console",
     "description": "app to manage OC extension, data or modules also build extension or module for opencart",
     "license": "MIT", 
-    "version": "1.0.0",  
+    "version": "1.0.1",  
     "authors": [
         {
             "name": "Rodrigo Manara",
