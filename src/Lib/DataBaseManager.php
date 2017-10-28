@@ -17,13 +17,7 @@ trait DataBaseManager {
      * @return \mysqli
      */
     private function db_connection() {
-
-        $dbhost = DB_HOSTNAME;
-        $dbuser = DB_USERNAME;
-        $dbpass = DB_PASSWORD;
-        $dbname = DB_DATABASE;
-
-        return new \mysqli($dbhost, $dbuser, $dbpass, $dbname, 3306);
+         return new \mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
     }
     /**
      * 

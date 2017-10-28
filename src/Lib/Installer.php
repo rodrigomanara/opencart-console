@@ -11,7 +11,7 @@ use Composer\Script\Event;
  */
 class Installer    {
     
-    use ComponetCommand;
+    use \Rmanara\App\Component;
     
     public static function Init(Event $event) {
 
@@ -20,8 +20,8 @@ class Installer    {
         $root = self::getDir($path);
      
         copy($vendorDir .DIRECTORY_SEPARATOR. "rmanara".DIRECTORY_SEPARATOR."App".DIRECTORY_SEPARATOR."src".DIRECTORY_SEPARATOR."console", $root .DIRECTORY_SEPARATOR. "console");
-    
-        echo "file ready";
+       
+        print_r("file ready") ;
         
     }
 
